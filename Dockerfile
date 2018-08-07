@@ -24,9 +24,8 @@ RUN yum -y install openlitespeed
 ADD repo/MariaDB.repo /etc/yum.repos.d/MariaDB.repo
 RUN yum -y install MariaDB-server MariaDB-client
 
-# Install PHP 72
-RUN yum -y install lsphp72 lsphp72-common lsphp72-mysqlnd lsphp72-process lsphp72-gd lsphp72-mbstring lsphp72-mcrypt lsphp72-opcache lsphp72-bcmath lsphp72-pdo lsphp72-xml lsphp72-json lsphp72-zip lsphp72-xmlrpc lsphp72-pecl-mcrypt
-
+# Install PHP 56
+RUN yum -y install lsphp56 lsphp56-common lsphp56-mysqlnd lsphp56-process lsphp56-gd lsphp56-mbstring lsphp56-mcrypt lsphp56-opcache lsphp56-bcmath lsphp56-pdo lsphp56-xml lsphp56-json lsphp56-zip lsphp56-xmlrpc lsphp56-pecl-mcrypt
 #Setting Up
 RUN mv -f /usr/local/lsws/conf/vhosts/Example/ /usr/local/lsws/conf/vhosts/defdomain/
 RUN rm -f /usr/local/lsws/conf/vhosts/defdomain/vhconf.conf
