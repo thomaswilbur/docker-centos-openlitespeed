@@ -40,7 +40,7 @@ ADD file/index.php /home/defdomain/html/index.php
 RUN chown lsadm:lsadm /usr/local/lsws/conf/vhosts/defdomain/vhconf.conf
 RUN chown lsadm:lsadm /usr/local/lsws/conf/httpd_config.conf
 RUN chown lsadm:lsadm /usr/local/lsws/admin/conf/admin_config.conf
-RUN -R chown nobody:nobody /home/defdomain/html/
+RUN chown -R nobody:nobody /home/defdomain/html/
 
 # make sure firewall
 EXPOSE 21
